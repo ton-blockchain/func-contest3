@@ -122,7 +122,7 @@ tuple decomposite (cell big_cell, slice destination_address) method_id {
 ## 3. Text calculator
 ```func
   {-
-  Contract receives internal message with text comment (link to the doc with description) which contains algebraic equation containing numbers in decimal representation and operations `(+-*/)`.
+  Contract receives internal message with text comment (https://ton.org/docs/develop/smart-contracts/guidelines/internal-messages) which contains algebraic equation containing numbers in decimal representation and operations `(+-*/)`.
   All values (including intermediate) fit 256 bit. Contract should respond (coins = 0, mode = 64) with correct answer encoded as text comment back.
   It is guaranteed that all tests contain a valid algebraic equations.
   Division result should be rounded down. It is guaranteed that tests do not contain division by zero.
