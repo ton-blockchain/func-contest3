@@ -87,7 +87,7 @@ tuple decomposite (cell big_cell, slice destination_address) method_id {
 {-
   Contract handles internal messages with queries with the following scheme
   `_# score:uint32 value:(VarUInteger 16) msg:^Cell = MsgInternalBody`, where msg contains message body which shoud be sent later and store it to contract.
-  Once the number of stored queries reaches 12, contract should send and delete from storage message with the highest score and message with the lowest value (if it is the same message, it should be sent once). Messages should be sent with mode 0, coin amount should be equal to value and it should contain corresponding message body. All scores and values are guaranteed to be different
+  Once the number of stored queries reaches 12, contract should send and delete from storage message with the highest score and message with the lowest value (if it is the same message, it should be sent once). Messages should be sent with mode 0 to the address from which last query was sent,  coin amount should be equal to value and it should contain corresponding message body. All scores and values are guaranteed to be different
   Note, that in addition to gas-fees, storage fees will be used to determine final score. In particular, storage fee will be calculated like between each message passes 3 days (259200 seconds). Gas-units price and storage fee params will correspond to current configs of masterchain: 1000 nanoTON per 65536 bits per second + 500000 nanoTON per 65536 cells per second; gas is 10000 nanoTON per unit.
 
 
