@@ -207,7 +207,7 @@ The most relevant places to start in the documentation:
 
 Additional and detailed information is available in the [whitepapers](https://ton.org/docs/learn/docs).
 
-Examples of standard smart contracts can be found in [here](https://github.com/ton-blockchain/ton/tree/master/crypto/smartcont).
+Examples of standard smart contracts can be found [here](https://github.com/ton-blockchain/ton/tree/master/crypto/smartcont).
 
 Developer Chats - [@tondev_eng](https://t.me/tondev_eng), [@tondev](https://t.me/tondev).
 
