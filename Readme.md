@@ -29,9 +29,9 @@ There are two mutually independent stages of contest, check more info on [challe
 
 Tasks are expected to be submitted through [@toncontests_bot](https://t.me/toncontests_bot).
 
-Solutions should be submitted as a zip archive that contains up to 6 files labeled `1.fc`, `2.fc`, `3.fc`, `4.fc`, `5.fc` (each file representing a corresponding task), and `participant.json`. 
+Solutions should be submitted as a zip archive that contains up to 6 files labeled `1.fc`, `2.fc`, `3.fc`, `4.fc`, `5.fc` (each file representing a corresponding task), and `participant.json`.
 
-Each file will be compiled with FunC from the [main repository](https://github.com/ton-blockchain/ton/tree/master/crypto/func). 
+Each file will be compiled with FunC from the [main repository](https://github.com/ton-blockchain/ton/tree/master/crypto/func).
 All solutions from the contestants will be linked with stdlib.fc (from the [ton-blochcain repository](https://github.com/ton-blockchain/ton/blob/master/crypto/smartcont/stdlib.fc)).
 
 `participant.json` should have the following structure:
@@ -157,7 +157,7 @@ int mul(int x1, int factor) {
 ```
 For `x1=56391866308239752110494101482511933051315484376135027248208522567059122930692`, `y1=17671033459111968710988296061676524036652749365424210951665329683594356030064` and `x2=39028180402644761518992797890514644768585183933988208227318855598921766377692`, `y2=17694324391104469229766971147677885172552105420452910290862122102896539285628`  result of `add(x1, y1, x2, y2)` expected to be `7769460008531208039267550090770832052561793182665100660016059978850497673345, 50777594312607721283178588283812137388073334114015585272572035433724485979392`. Tests only checks additions where the result of the addition is the finite valid point on the curve.
 
-For `x1=56391866308239752110494101482511933051315484376135027248208522567059122930692` and `factor=4`, result of `mul(x1,factor)` expected to be `41707806908216107150933211614905026312154955484464515789593741233629885877574`. 
+For `x1=56391866308239752110494101482511933051315484376135027248208522567059122930692` and `factor=4`, result of `mul(x1,factor)` expected to be `41707806908216107150933211614905026312154955484464515789593741233629885877574`.
 
 ## 5. Mini Elector
 ```func
@@ -197,11 +197,15 @@ For `x1=563918663082397521104941014825119330513154843761350272482085225670591229
 
 ## Docs
 
-We recommend participants check out https://ton.org/en/dev.
+We recommend participants start from here:
+* [Developers Portal](https://ton.org/en/dev)
+* [TON Documentation](https://ton.org/docs)
 
-Note https://ton.org/docs in particular "Basic concepts" and "Smart Contracts" sections. 
+The most relevant places to start in the documentation:
+* [TON concepts](https://ton.org/docs/learn/overviews/TON_blockchain_overview)
+* [Develop Smart Contracts](https://ton.org/docs/develop/smart-contracts/)
 
-Additional and detailed information is available in the [whitepapers](https://ton.org/docs/#/docs).
+Additional and detailed information is available in the [whitepapers](https://ton.org/docs/learn/docs).
 
 Examples of standard smart contracts can be found [here](https://github.com/ton-blockchain/ton/tree/master/crypto/smartcont).
 
@@ -209,14 +213,15 @@ Developer Chats - [@tondev_eng](https://t.me/tondev_eng), [@tondev](https://t.me
 
 FunC studying chat - [@ton_learn](https://t.me/ton_learn).
 
-Introduction and tutorials are available here: https://ton.org/docs/#/func/overview
+Introduction and tutorials for FunC are available here:
+* https://ton.org/docs/develop/func/overview
 
 ## How to compile and test
 
-We recommend using the [toncli](https://github.com/disintar/toncli) or [ton-contract-executor](https://github.com/Naltox/ton-contract-executor) - open-source tools written by community developers.
+We recommend using the [toncli](https://ton.org/docs/develop/smart-contracts/testing/toncli) or [ton-contract-executor](https://github.com/Naltox/ton-contract-executor) - open-source tools written by community developers.
 
 These tools allow you to work with FunC smart contracts, compile them, and run local tests.
 
-If for some reason you don’t want to use the tool, you can use the FunC compiler and Fift scripts [directly](https://ton.org/docs/#/smart-contracts/?id=func).
+If for some reason you don’t want to use the tool, you can use the FunC compiler and Fift scripts [directly](https://ton.org/docs/develop/howto/compile#func).
 
-For syntax highlighting, you can use either the [TON IDEA Plugin](https://plugins.jetbrains.com/plugin/18541-ton-development) or [Sublime Text Plugin](https://github.com/savva425/func_plugin_sublimetext3).
+For syntax highlighting, you can use [IDE plugins](https://ton.org/docs/develop/smart-contracts/environment/ide-plugins).
