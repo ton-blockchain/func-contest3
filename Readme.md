@@ -69,6 +69,9 @@ Winners are determined as follows:
     a) it has get_method "decomposite" for decomposition of large cell to parts: it accepts 1 cell (number_of_bits<1000000, number_of_cells<4000 , depth<256) and 1 address and returns tuple of cells (each of which has less than 1000 distinct cells and 40000 bits total), those cells will be transformed to slice and sent as internal message body to the contract.
     b) recv_internal should handle those internal messages from get-method described above and upon receiving last one, send initial large cell to the address (coins amount 0, mode 0). For simplicity, it is guaranteed that messages will be sent exactly in the order in which they were in decomposite output and no other messages will be sent in between.
   Note, that initial state of contract storage will be empty cell: cell with zero bits and refs.
+  
+  It is necessary to stress the deduplication mechanism of dag (or bag) of cells. If exactly the same cell (that means both same bits and same refs) is appeared in different part of the dag twice or multiple times it will not be stored or counted separately. All numbers in the task like 64kb, number_of_bits<1000000, number_of_cells<4000, 1000 cells and 40000 bits in output is given with account for deduplication. FunC functions compute_data_size/slice_compute_data_size (as well as underlying opcodes CDATASIZE/SDATASIZE) returns output with account for deduplication as well.
+  
 -}
 
 ;; testable
