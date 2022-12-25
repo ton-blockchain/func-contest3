@@ -20,6 +20,13 @@ This limit is high enough that it only rules out infinite loops. Any practical s
 
 We ask participants not to change the signature (number, order, and types of arguments and result) of `testable` functions for us to be able to evaluate their submission.
 
+# Solutions open-sourced by participants
+[crazyministr](https://github.com/crazyministr/TonContest-FunC/tree/master/func-contest3)
+
+[nns2009](https://github.com/nns2009/TON-FunC-contest-3)
+
+[shuva10v](https://github.com/shuva10v/func-contest3-solutions)
+
 # Stages
 There are two mutually independent stages of contest, check more info on [challenge website](https://ton.org/en/ton-smart-challenge-3).
 
